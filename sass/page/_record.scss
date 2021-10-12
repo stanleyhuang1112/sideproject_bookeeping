@@ -1,0 +1,55 @@
+.monthMenu{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 15px 5px;
+    border-bottom: 1px solid #000;
+    .btn{
+        width: 50px;
+        text-align: center;
+        padding: 5px 0;
+        margin: 5px 10px;
+        border: 1px solid $mainColor;
+    }
+}
+
+.typeTotalBox{
+    .typeBox{
+        padding: 20px 0;
+        border-bottom: 1px solid $mainColor;
+    }
+    .mainTypeBox{
+        display: flex;
+        margin-bottom: 15px;
+        .mainType{
+            width: 100px;
+            text-align: center;
+        }
+    }
+    .allSecondaryTypeBox{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .secondaryTypeBox{
+        width: 100px;
+        text-align: center;
+        margin-bottom: 10px;
+        border: 1px solid $mainColor;
+        border-bottom: none;
+        p{
+            padding: 5px 0;
+            border-bottom: 1px solid $mainColor;
+        }
+    }
+}
+
+.monthRecord{  
+    height: 500px;
+    padding: 15px 0;  
+    margin: 15px auto 0;
+    border-bottom: 1px solid #000;   
+    overflow: scroll;
+    .recordForm{
+        margin: 20px 0;
+    }
+} 

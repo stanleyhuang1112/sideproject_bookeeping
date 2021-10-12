@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookeeping</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1>
+                <a href="index.html" class="logo btn">Bookeeping</a>
+            </h1>
+            <ul class="menu">
+                <li><a href="index.html" class="btn btn_style">快速記帳</a></li>
+                <li><a href="record.html" class="btn btn_style">記帳紀錄</a></li>
+                <li><a href="dataAnalysis.html" class="btn btn_style">數據分析</a></li>
+                <li><a href="config.html" class="btn btn_style">個人設定</a></li>
+            </ul>
+            <a href="#" class="menuBtn btn"></a>
+        </div>
+        <div class="content">
+            <ul class="monthMenu">
+                <li><a href="#" class="btn monthBtn btn_style" data-month="0">1月</a></li>
+                <li><a href="#" class="btn monthBtn btn_style" data-month="1">2月</a></li>
+                <li><a href="#" class="btn monthBtn btn_style" data-month="2">3月</a></li>
+                <li><a href="#" class="btn monthBtn btn_style" data-month="3">4月</a></li>
+                <li><a href="#" class="btn monthBtn btn_style" data-month="4">5月</a></li>
+                <li><a href="#" class="btn monthBtn btn_style" data-month="5">6月</a></li>
+                <li><a href="#" class="btn monthBtn btn_style" data-month="6">7月</a></li>
+                <li><a href="#" class="btn monthBtn btn_style" data-month="7">8月</a></li>
+                <li><a href="#" class="btn monthBtn btn_style" data-month="8">9月</a></li>
+                <li><a href="#" class="btn monthBtn btn_style" data-month="9">10月</a></li>
+                <li><a href="#" class="btn monthBtn btn_style" data-month="10">11月</a></li>
+                <li><a href="#" class="btn monthBtn btn_style" data-month="11">12月</a></li>
+            </ul>
+            <div class="infoBox datailedInfoBox">
+                <p class="year_month"><span class="year"></span> . <span class="month"></span></p>
+                <ul class="monthTotal">
+                    <li class="monthCostTotal">本月總花費：<span class="value"></span></li>
+                    <li class="monthRevenueTotal">本月總收入：<span class="value"></span></li>
+                </ul>
+                <div class="propertyBox">
+                    <div class="titleBox btn">
+                        <h3 class="title">目前資產總額</h3>
+                        <a href="#" class="btn">
+                            <img src="img/icon_triangleArrow@svg.svg" alt="箭頭圖示">
+                        </a>
+                    </div>
+                    <div class="canHide">
+                        <ul class="propertyList"></ul>
+                    </div>
+                </div>
+                <div class="typeTotal">
+                    <div class="titleBox btn">
+                        <h3 class="title">本月各項目統計</h3>
+                        <a href="#" class="btn">
+                            <img src="img/icon_triangleArrow@svg.svg" alt="箭頭圖示">
+                        </a>
+                    </div>
+                    <div class="canHide">
+                        <div class="btnBox">
+                            <div class="costBtn btn btn_style recordBtn typeBtn now_type">支出</div>
+                            <div class="revenueBtn btn btn_style recordBtn typeBtn">收入</div>
+                        </div>
+                        <div class="typeTotalBox"></div>
+                    </div>                    
+                </div>
+            </div>
+            <ul class="monthRecord">
+            </ul>
+        </div>
+    </div>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+</html>

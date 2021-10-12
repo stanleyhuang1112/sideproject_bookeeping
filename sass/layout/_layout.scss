@@ -1,0 +1,76 @@
+.wrap{
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.header{
+    position: fixed;
+    z-index: 30;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 870px;
+    height: 50px;
+    background-color: $backgroundColor;
+    margin-top: -50px;
+    border-bottom: 1px solid $mainColor;
+    .logo{
+        font-size: $text_logo; 
+    }
+    .menu{
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+        li:nth-child(3){
+            display: none;
+        }
+        a{
+            width: 100px;
+            text-align: center;
+            padding: 5px 0;
+            margin-left: 15px;
+            border: 1px solid $mainColor;
+            border-bottom: none;
+        }
+    }
+    .menuBtn{
+        display: none;
+        width: 30px;
+        height: 30px;
+        background-image: url(../img/icon_dropmenu@svg.svg) ;
+    }
+    @media(max-width: 870px){
+        width: 100%;   
+        padding: 0 15px;     
+    }
+    @media(max-width: 700px){
+        .menu{
+            position: absolute;
+            top: 50px;
+            right: 0;
+            display: block;
+            height: 0;
+            overflow: hidden;
+            transition: 0.2s;
+            .btn{
+                width: 150px;
+                text-align: center;
+                background-color: $backgroundColor;
+                padding: 10px 0;
+            }
+            .btn:last-child{
+                border-bottom: 1px solid #000;
+            }            
+        }
+        .menuDrop{
+            height: 152px;
+        }
+        .menuBtn{
+            display: block;
+        }
+    }
+}
+
+.content{
+    margin-top: 50px;
+}

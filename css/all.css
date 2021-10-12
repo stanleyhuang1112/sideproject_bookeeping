@@ -1,0 +1,788 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  color: #000;
+  font-family: "Michroma";
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.btn {
+  display: block;
+  cursor: pointer;
+}
+
+.btn_style {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.btn_style:hover {
+  color: #fff;
+  background-color: #555;
+}
+
+.px-1 {
+  padding: 0 5px;
+}
+
+.infoBox {
+  border-bottom: 1px solid #000;
+}
+
+.infoBox .year_month, .infoBox .monthTotal, .infoBox .propertyBox, .infoBox .typeTotal {
+  padding: 15px 10px;
+  border-bottom: 1px solid #000;
+}
+
+.infoBox .year_month {
+  border-bottom: none;
+}
+
+.infoBox .monthTotal li {
+  padding: 5px;
+}
+
+.infoBox .propertyBox .propertyList {
+  padding-left: 10px;
+}
+
+.infoBox .propertyBox .propertyList li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.infoBox .propertyBox .propertyList .name {
+  width: 100px;
+}
+
+.infoBox .typeTotal {
+  border-bottom: none;
+}
+
+.infoBox .typeTotal .btnBox {
+  margin: 15px 0;
+}
+
+.infoBox .typeTotal td {
+  width: 100px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #000;
+}
+
+.infoBox .typeTotal .mainType {
+  vertical-align: middle;
+}
+
+.recordForm {
+  padding: 0 10px;
+  border: 1px solid #000;
+}
+
+.recordForm .recordField {
+  padding: 0 0 60px;
+  max-width: 790px;
+  margin-left: auto;
+}
+
+@media (max-width: 800px) {
+  .recordForm {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.formHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #000;
+}
+
+.recordField .recordList .dayRecordList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #000;
+}
+
+.recordField .recordList .dayRecordList .typeAndAmountBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.recordField .recordList .dayRecordList .mainType {
+  width: 60px;
+}
+
+.recordField .recordList .dayRecordList .secondaryType {
+  width: 100px;
+}
+
+.recordField .recordList .dayRecordList .paymentMethod {
+  width: 120px;
+}
+
+.recordField .recordList .dayRecordList .amount {
+  width: 200px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.recordField .recordList .dayRecordList .note {
+  width: 280px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.recordField .recordList .dayRecordList .ifAmountNotFin {
+  width: 0;
+  border-color: #fff;
+}
+
+.recordField .recordList .dayRecordList p {
+  padding: 5px 8px 4px;
+}
+
+.recordField .recordList .maxWidth800Component .deleteBtn {
+  margin-bottom: 15px;
+}
+
+.recordField .recordList .inputBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recordField .recordList input:focus {
+  border: 1px solid #000;
+}
+
+.recordField .recordList .input_fin {
+  border-color: #fff;
+}
+
+.recordField .recordList .amount.input_fin {
+  width: 100px;
+}
+
+.recordField .btnAndTotalBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 5px;
+}
+
+.recordField .btnAndTotalBox .total {
+  text-align: right;
+}
+
+@media (max-width: 800px) {
+  .recordField .recordList .dayRecordList {
+    display: block;
+  }
+  .recordField .recordList .dayRecordList .input_style {
+    width: 160px;
+    border-color: #000;
+  }
+  .recordField .recordList .dayRecordList .inputBox {
+    padding-top: 15px;
+  }
+}
+
+@media (max-width: 567px) {
+  .recordField .recordList .dayRecordList .selectBox {
+    max-width: 85px;
+  }
+}
+
+.selectBox {
+  position: relative;
+  margin-right: 5px;
+}
+
+.selectBox .select {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.selectBox .select:hover {
+  border-color: #000;
+}
+
+.selectBox .option {
+  position: absolute;
+  top: 28px;
+  z-index: 10;
+  display: none;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid #000;
+  border-bottom: none;
+  border-radius: 5px;
+}
+
+.selectBox .option li {
+  padding: 5px;
+  border-bottom: 1px solid #000;
+}
+
+.selectBox .option li:hover {
+  color: #fff;
+  background-color: #555;
+}
+
+@media (max-width: 800px) {
+  .selectBox {
+    margin-right: 25px;
+  }
+  .selectBox .select {
+    border-color: #000;
+  }
+}
+
+@media (max-width: 480px) {
+  .selectBox {
+    margin-right: 5px;
+  }
+}
+
+.recordBtn {
+  width: 50px;
+  padding: 5px 8px 4px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.btnBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btnBox .btn {
+  margin-right: 5px;
+}
+
+.btnBox .now_type {
+  color: #fff;
+  background-color: #555;
+}
+
+.input_style {
+  font-family: "Michroma";
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.input_style:focus {
+  outline: none;
+}
+
+.hideBtn {
+  display: none;
+}
+
+.titleBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  font-size: 20px;
+  padding: 5px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.titleBox .btn {
+  width: 20px;
+  height: 20px;
+}
+
+.titleBox .btn img {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.titleBox:hover {
+  background-color: #aaa;
+}
+
+.hideBox .btn img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.hideBox:hover {
+  background-color: #aaa;
+}
+
+.maxWidth800Component {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .maxWidth800Component {
+    display: block;
+  }
+}
+
+.minWidth800Component {
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .minWidth800Component {
+    display: none;
+  }
+}
+
+.wrap {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.header {
+  position: fixed;
+  z-index: 30;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 870px;
+  height: 50px;
+  background-color: #fff;
+  margin-top: -50px;
+  border-bottom: 1px solid #000;
+}
+
+.header .logo {
+  font-size: 24px;
+}
+
+.header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 100%;
+}
+
+.header .menu li:nth-child(3) {
+  display: none;
+}
+
+.header .menu a {
+  width: 100px;
+  text-align: center;
+  padding: 5px 0;
+  margin-left: 15px;
+  border: 1px solid #000;
+  border-bottom: none;
+}
+
+.header .menuBtn {
+  display: none;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/icon_dropmenu@svg.svg);
+}
+
+@media (max-width: 870px) {
+  .header {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  .header .menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .header .menu .btn {
+    width: 150px;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px 0;
+  }
+  .header .menu .btn:last-child {
+    border-bottom: 1px solid #000;
+  }
+  .header .menuDrop {
+    height: 152px;
+  }
+  .header .menuBtn {
+    display: block;
+  }
+}
+
+.content {
+  margin-top: 50px;
+}
+
+.dayRecord {
+  padding: 15px 0;
+}
+
+.monthMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 15px 5px;
+  border-bottom: 1px solid #000;
+}
+
+.monthMenu .btn {
+  width: 50px;
+  text-align: center;
+  padding: 5px 0;
+  margin: 5px 10px;
+  border: 1px solid #000;
+}
+
+.typeTotalBox .typeBox {
+  padding: 20px 0;
+  border-bottom: 1px solid #000;
+}
+
+.typeTotalBox .mainTypeBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.typeTotalBox .mainTypeBox .mainType {
+  width: 100px;
+  text-align: center;
+}
+
+.typeTotalBox .allSecondaryTypeBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.typeTotalBox .secondaryTypeBox {
+  width: 100px;
+  text-align: center;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  border-bottom: none;
+}
+
+.typeTotalBox .secondaryTypeBox p {
+  padding: 5px 0;
+  border-bottom: 1px solid #000;
+}
+
+.monthRecord {
+  height: 500px;
+  padding: 15px 0;
+  margin: 15px auto 0;
+  border-bottom: 1px solid #000;
+  overflow: scroll;
+}
+
+.monthRecord .recordForm {
+  margin: 20px 0;
+}
+
+.configBox {
+  border-bottom: 1px solid #000;
+  padding: 20px;
+}
+
+.configBox .btnBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.configBox .btnBox .btn {
+  margin-right: 5px;
+}
+
+.typeConfig .typeConfigBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.typeConfig .typeConfigBox ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 10px 10px 0;
+}
+
+.typeConfig .typeConfigBox ul input {
+  margin-right: 15px;
+}
+
+.typeConfig .typeConfigBox ul input:focus {
+  outline: none;
+}
+
+.typeConfig .typeConfigBox .typeBox {
+  padding: 15px;
+  margin-right: 20px;
+  border: 1px solid #000;
+}
+
+.typeConfig .typeConfigBox .mainTypeBox {
+  width: 200px;
+}
+
+.typeConfig .typeConfigBox .mainTypeBox input {
+  width: 70px;
+}
+
+.typeConfig .typeConfigBox .secondaryTypeBox {
+  width: 50%;
+}
+
+.typeConfig .typeConfigBox .secondaryTypeBox input {
+  width: 150px;
+}
+
+@media (max-width: 568px) {
+  .typeConfig .typeConfigBox {
+    display: block;
+  }
+  .typeConfig .typeConfigBox .typeBox {
+    min-width: 280px;
+    margin: 20px 0;
+    overflow: scroll;
+  }
+  .typeConfig .typeConfigBox .mainTypeBox {
+    height: 150px;
+  }
+  .typeConfig .typeConfigBox .secondaryTypeBox {
+    height: 200px;
+  }
+}
+
+.commonOption {
+  display: none;
+}
+
+.commonOption .commonOptionBox {
+  border: 1px solid #000;
+  margin-bottom: 15px;
+}
+
+.commonOption .commonOptionBox li ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+}
+
+.commonOption .commonOptionBox li ul li {
+  margin-left: 10px;
+}
+
+.commonOption .commonOptionBox li ul input, .commonOption .commonOptionBox li ul p {
+  width: 120px;
+}
+
+.commonOption .commonOptionBox li ul .note {
+  width: 280px;
+}
+
+.commonOption .commonOptionBox .periodConfig {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.commonOption .commonOptionBox .periodConfig .periodConfigForm {
+  position: absolute;
+  top: calc(50% - 250px);
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 500px;
+  background-color: #fff;
+}
+
+.commonOption .commonOptionBox .hide {
+  display: none;
+}
+
+.commonOption .commonOptionBox .show {
+  display: block;
+}
+
+.propertyOptionBox li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.propertyOptionBox li input {
+  margin-right: 15px;
+}
+
+.propertyOptionBox .method {
+  width: 120px;
+}
+
+.propertyOptionBox .initialValue {
+  width: 150px;
+}
+
+@media (max-width: 568px) {
+  .propertyOptionBox li {
+    margin-bottom: 20px;
+  }
+  .propertyOptionBox .method {
+    width: 85px;
+    margin-right: 5px;
+  }
+  .propertyOptionBox .initialValue {
+    width: 120px;
+  }
+}
+/*# sourceMappingURL=all.css.map */

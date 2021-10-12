@@ -1,0 +1,278 @@
+.infoBox{ 
+    border-bottom: 1px solid $mainColor;
+    .year_month, .monthTotal, .propertyBox, .typeTotal{
+        padding: 15px 10px;
+        border-bottom: 1px solid $mainColor;
+    }
+    .year_month{
+        border-bottom: none;
+    }
+    .monthTotal{
+        li{
+            padding: 5px;
+        }
+    }
+    .propertyBox{
+        .propertyList{
+            padding-left: 10px;
+            li{
+                display: flex;
+                padding: 5px;
+                margin-top: 5px;
+            }
+            .name{
+                width: 100px;
+            }
+        }
+    }
+    .typeTotal{ 
+        border-bottom: none; 
+        .btnBox{
+            margin: 15px 0;
+        }      
+        td{
+            width: 100px;
+            text-align: center;
+            padding: 5px;
+            border: 1px solid #000;
+        }
+        .mainType{
+            vertical-align: middle;
+        }
+    }
+}
+
+.recordForm{
+    padding: 0 10px;
+    border: 1px solid $mainColor; 
+    .recordField{
+        padding: 0 0 60px;
+        max-width: 790px;
+        margin-left: auto;
+    }
+    @media(max-width: 800px){
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+.formHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid $mainColor;
+}
+  
+.recordField{
+    .recordList{
+        .dayRecordList{
+            display: flex;
+            justify-content: space-between;  
+            padding: 5px 0;
+            border-bottom: 1px solid $mainColor;
+            .typeAndAmountBox{
+                display: flex;
+            } 
+            .mainType{
+                width: 60px;
+            }
+            .secondaryType{
+                width: 100px;
+            }
+            .paymentMethod{
+                width: 120px;
+            }
+            .amount{
+                width: 200px;
+                transition: 0.2s;
+            }
+            .note{
+                width: 280px;
+                transition: 0.2s;
+            }
+            .ifAmountNotFin{
+                width: 0;
+                border-color: $backgroundColor;
+            }    
+            p{
+                padding: 5px 8px 4px;
+            }   
+        }
+        .maxWidth800Component .deleteBtn{
+            margin-bottom: 15px;
+        }
+        .inputBox{
+            display: flex;
+            align-items: center;
+        }
+        input:focus{
+            border: 1px solid $mainColor;
+        }
+        .input_fin{
+            border-color: $backgroundColor;
+        }
+        .amount.input_fin{
+            width: 100px;
+        }
+    }
+    .btnAndTotalBox{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 5px;
+        .total{
+            text-align: right;
+        }
+    }
+    @media(max-width: 800px){
+        .recordList{
+            .dayRecordList{
+                display: block;
+                .input_style{
+                    width: 160px;
+                    border-color: $mainColor;
+                }
+                .inputBox{
+                    padding-top: 15px;
+                }
+            }  
+        }  
+    }
+    @include width_iPhone-1{
+        .recordList{
+            .dayRecordList{
+                .selectBox{
+                    max-width: 85px;
+                }
+            }   
+        } 
+    }
+}
+
+.selectBox{
+    position: relative;
+    margin-right: 5px;              
+    .select{
+        text-align: center;
+        padding: 5px;
+        border: 1px solid $backgroundColor;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover{
+            border-color: $mainColor;
+        }
+    }
+    .option{
+        position: absolute;
+        top: 28px;
+        z-index: 10;
+        display: none;
+        width: 100%;
+        background-color: $backgroundColor;
+        text-align: center;
+        border: 1px solid $mainColor;
+        border-bottom: none;
+        border-radius: 5px;
+        li{
+            padding: 5px; 
+            border-bottom: 1px solid $mainColor;
+            &:hover{
+                color: $backgroundColor;
+                background-color: #555;
+            }
+        }
+    }
+    @media(max-width: 800px){
+        margin-right: 25px;
+        .select{
+            border-color: $mainColor;
+        }
+    }
+    @include width_mobile480{
+        margin-right: 5px;
+    }
+}
+
+.recordBtn{
+    width: 50px;
+    padding: 5px 8px 4px;
+    border: 1px solid $mainColor;
+    border-radius: 10px;
+}
+
+.btnBox{
+    display: flex;
+    .btn{
+        margin-right: 5px;
+    }
+    .now_type{
+        color: $hoverFontColor;
+        background-color: $hoverBackgroundColor;
+    }
+}
+
+.input_style{
+    font-family: "Michroma";
+    font-size: $text_M;
+    text-align: center;
+    border: 1px solid $mainColor;
+    border-radius: 5px;
+    &:focus{
+        outline: none;
+    }
+}
+
+.hideBtn{
+    display: none;
+}
+
+.titleBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    font-size: $text_XL;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+    border: 1px solid $mainColor;
+    border-radius: 10px;
+    transition: 0.2s;
+    .btn{
+        width: 20px;
+        height: 20px;
+        img{
+            transition: 0.2s;
+            transform: rotate(270deg);
+        }
+    }
+    &:hover{
+        background-color: #aaa;
+    }    
+}
+
+.hideBox{
+    .btn{
+        img{        
+            transform: rotate(180deg);
+        }
+    }
+    &:hover{
+        background-color: #aaa;
+    }
+}
+
+.maxWidth800Component{
+    display: none;
+    @media(max-width: 800px){
+        display: block;
+    }
+}
+
+.minWidth800Component{
+    display: block;
+    @media(max-width: 800px){
+        display: none;
+    }
+}

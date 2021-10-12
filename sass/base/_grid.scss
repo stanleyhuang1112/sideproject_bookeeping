@@ -1,0 +1,52 @@
+@mixin width_pad {
+    @media(max-width: 768px){
+        @content;
+    }
+}
+@mixin width_pad-1 {
+    @media(max-width: 767px){
+        @content;
+    }
+}
+@mixin width_iPhone {
+    @media(max-width: 568px){
+        @content;
+    }
+}
+@mixin width_iPhone-1 {
+    @media(max-width: 567px){
+        @content;
+    }
+}
+@mixin width_mobile480 {
+    @media(max-width: 480px){
+        @content;
+    }
+}
+@mixin width350 {
+    @media(max-width: 350px){
+        @content;
+    }
+}
+@mixin width_iPhone5S {
+    @media(max-width: 320px){
+        @content;
+    }
+}
+@mixin width_iPhone5S-1 {
+    @media(max-width: 319px){
+        @content;
+    }
+}
+
+
+@mixin width_custom ($width){
+    @media(max-width: $width){
+        @content;
+    }    
+}
+@mixin widthMax_Min($max, $min) {
+    @media(max-width: $max) and (min-width: $min){
+        @content;
+    }
+}

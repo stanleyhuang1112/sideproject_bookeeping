@@ -1,0 +1,15 @@
+//base
+@import "base/reset";
+@import "base/variable";
+@import "base/base";
+@import "base/mixin";
+@import "base/grid";
+@import "base/component";
+
+//layout
+@import "layout/layout";
+
+//page
+@import "page/index";
+@import "page/record";
+@import "page/config";
