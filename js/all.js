@@ -816,16 +816,17 @@ function secondaryTypeChange(e){
 }
 
 function addRecordEditClass(e){
-    for(let i = 0; i < e.path.length; i++){
-        if(e.path[i].nodeName === 'BODY'){return}        
+    console.log(e.composedPath())
+    for(let i = 0; i < e.composedPath().length; i++){
+        if(e.composedPath()[i].nodeName === 'BODY'){return}        
 
-        let targetClassList = e.path[i].classList;
+        let targetClassList = e.composedPath()[i].classList;
 
         if(targetClassList[0] === 'recordForm'){
-            for(let k = 0; k < e.path[i].parentElement.children.length; k++){
-                e.path[i].parentElement.children[k].classList.remove('record_edit');
+            for(let k = 0; k < e.composedPath()[i].parentElement.children.length; k++){
+                e.composedPath()[i].parentElement.children[k].classList.remove('record_edit');
             }
-            e.path[i].classList.add('record_edit');
+            e.composedPath()[i].classList.add('record_edit');
         }
     } 
 }
